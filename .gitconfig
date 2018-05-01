@@ -1,0 +1,27 @@
+[push]
+	default = simple
+[alias]
+  tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	unstage = reset --
+	co = checkout
+	st = status
+	praise = blame
+	ask = blame
+	dad = !curl https://icanhazdadjoke.com/
+	diffw = diff --word-diff
+	diffc = diff --cached
+	diffcw = diff --cached --word-diff
+[user]
+	name = Randeep Dhaliwal
+	email = dhaliwal.randeep.s@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[core]
+	editor = /usr/bin/vim
+[gui]
+	recentrepo = /Users/rdhaliwal/workspace/your-grocer/yg_shop
+[init]
+	templatedir = ~/workspace/git-things
